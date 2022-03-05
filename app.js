@@ -101,5 +101,5 @@ Notification.requestPermission().then((result) => {
 });
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js');
+  navigator.serviceWorker.register('/battalary/sw.js');
 }
