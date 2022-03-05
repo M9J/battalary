@@ -90,7 +90,11 @@ function pushNotification() {
     body: notifBody,
     icon: notifImg,
   };
-  new Notification(notifTitle, options);
+  try {
+    new Notification(notifTitle, options);
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 function playAudio() {
