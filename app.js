@@ -1,5 +1,5 @@
 console.log('Battalary version 1');
-console.log('Last build: ' + '3/5/2022, 11:18:53 PM');
+console.log('Last build: ' + '3/5/2022, 11:26:19 PM');
 
 let isMonitoring = false;
 let batteryRef = null;
@@ -9,7 +9,6 @@ const btnStart = document.getElementById('start-button');
 const btnStop = document.getElementById('stop-button');
 const lblBatteryIsCharging = document.getElementById('battery-is-charging');
 const lblBatteryLevel = document.getElementById('battery-level');
-
 
 function startMonitoring() {
   if (!batteryRef) {

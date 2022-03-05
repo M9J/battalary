@@ -13,6 +13,7 @@ const appShellFiles = [
   '/battalary/icons/icon-192.png',
   '/battalary/icons/icon-256.png',
   '/battalary/icons/icon-512.png',
+  '/battalary/audio/oy-oy.mp3',
 ];
 const contentToCache = appShellFiles;
 
