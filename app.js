@@ -21,11 +21,11 @@ function startMonitoring() {
       updateAllBatteryInfo();
       batteryRef.addEventListener('chargingchange', chargingchange);
       batteryRef.addEventListener('levelchange', levelchange);
-      batteryRef.addEventListener('chargingtimechange', chargingtimechange);
-      batteryRef.addEventListener(
-        'dischargingtimechange',
-        dischargingtimechange
-      );
+      // batteryRef.addEventListener('chargingtimechange', chargingtimechange);
+      // batteryRef.addEventListener(
+      //   'dischargingtimechange',
+      //   dischargingtimechange
+      // );
       isMonitoring = true;
       btnStart.classList.add('hidden');
       btnStop.classList.remove('hidden');
@@ -38,11 +38,11 @@ function stopMonitoring() {
     pauseAudio();
     batteryRef.removeEventListener('chargingchange', chargingchange);
     batteryRef.removeEventListener('levelchange', levelchange);
-    batteryRef.removeEventListener('chargingtimechange', chargingtimechange);
-    batteryRef.removeEventListener(
-      'dischargingtimechange',
-      dischargingtimechange
-    );
+    // batteryRef.removeEventListener('chargingtimechange', chargingtimechange);
+    // batteryRef.removeEventListener(
+    //   'dischargingtimechange',
+    //   dischargingtimechange
+    // );
     batteryRef = null;
     lblBatteryIsCharging.innerHTML = '-';
     lblBatteryLevel.innerHTML = '-';
