@@ -1,4 +1,4 @@
-console.log('Battalary version 1');
+console.log('Battalary version 2');
 
 let isMonitoring = false;
 
