@@ -1,4 +1,5 @@
-console.log('Battalary version 2');
+console.log('Battalary version 3');
+console.log('Last build: 2022-03-05T15:17:22.049Z');
 
 let isMonitoring = false;
 
@@ -16,12 +17,12 @@ function startMonitoring() {
     battery.addEventListener('chargingchange', () => {
       updateChargeInfo();
     });
-    
+
     function updateChargeInfo() {
       document.getElementById('battery-is-charging').innerHTML =
-      battery.charging ? 'Yes' : 'No';
+        battery.charging ? 'Yes' : 'No';
     }
-    
+
     battery.addEventListener('levelchange', () => {
       updateLevelInfo();
       playAudio();
@@ -64,10 +65,7 @@ function playAudio() {
   new Audio('audio/oy-oy.mp3').play();
 }
 
-// startMonitoring();
 Notification.requestPermission().then((result) => {
   if (result === 'granted') {
-    // randomNotification();
-    // alert('Notif granted');
   }
 });
