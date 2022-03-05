@@ -7,36 +7,35 @@
     <title>Battalary</title>
     <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
   </head>
   <body>
     <div class="battalary-container">
       <div class="battalary-header">Battalary</div>
-      <div class="col-2">
-        <div class="battery-info">
-          <div class="label">Level</div>
-          <div class="value"><span id="battery-level">-</span></div>
-        </div>
-        <div class="battery-info">
-          <div class="label">Charging</div>
-          <div class="value"><span id="battery-is-charging">-</span></div>
+      <div class="battery-info">
+        <div class="label">Level</div>
+        <div class="value"><span id="battery-level">-</span></div>
+      </div>
+      <div class="battery-info">
+        <div class="label">Charging</div>
+        <div class="value"><span id="battery-is-charging">-</span></div>
+      </div>
+      <div class="battery-info">
+        <div class="label">Charging Time</div>
+        <div class="value">
+          <span id="battery-charging-time">-</span>
         </div>
       </div>
-      <div class="col-2">
-        <div class="battery-info">
-          <div class="label">Charging Time</div>
-          <div class="value">
-            <span id="battery-charging-time">-</span>
-          </div>
-        </div>
-        <div class="battery-info">
-          <div class="label">Discharge Time</div>
-          <div class="value">
-            <span id="battery-discharging-time">-</span>
-          </div>
+      <div class="battery-info">
+        <div class="label">Discharge Time</div>
+        <div class="value">
+          <span id="battery-discharging-time">-</span>
         </div>
       </div>
       <button id="start-button" onclick="startMonitoring()">Start</button>
+      <button id="stop-button" class="hidden" onclick="stopMonitoring()">
+        Stop
+      </button>
     </div>
   </body>
 </html>
