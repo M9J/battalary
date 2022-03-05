@@ -46,8 +46,8 @@ function stopMonitoring() {
     batteryRef = null;
     lblBatteryIsCharging.innerHTML = '-';
     lblBatteryLevel.innerHTML = '-';
-    lblBatteryChargingTime.innerHTML = '-';
-    lblBatteryDischargingTime.innerHTML = '-';
+    // lblBatteryChargingTime.innerHTML = '-';
+    // lblBatteryDischargingTime.innerHTML = '-';
     isMonitoring = false;
     btnStop.classList.add('hidden');
     btnStart.classList.remove('hidden');
@@ -57,8 +57,8 @@ function stopMonitoring() {
 function updateAllBatteryInfo() {
   chargingchange();
   levelchange();
-  chargingtimechange();
-  dischargingtimechange();
+  // chargingtimechange();
+  // dischargingtimechange();
 }
 
 function chargingchange() {
