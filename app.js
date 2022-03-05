@@ -1,5 +1,5 @@
 console.log('Battalary version 3');
-console.log('Last build: 2022-03-05T15:17:22.049Z');
+console.log('Last build: ' + '2022-03-05T16:26:14.395Z');
 
 let isMonitoring = false;
 let batteryRef = null;
