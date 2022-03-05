@@ -9,10 +9,7 @@ const btnStart = document.getElementById('start-button');
 const btnStop = document.getElementById('stop-button');
 const lblBatteryIsCharging = document.getElementById('battery-is-charging');
 const lblBatteryLevel = document.getElementById('battery-level');
-const lblBatteryChargingTime = document.getElementById('battery-charging-time');
-const lblBatteryDischargingTime = document.getElementById(
-  'battery-discharging-time'
-);
+
 
 function startMonitoring() {
   if (!batteryRef) {
@@ -21,11 +18,6 @@ function startMonitoring() {
       updateAllBatteryInfo();
       batteryRef.addEventListener('chargingchange', chargingchange);
       batteryRef.addEventListener('levelchange', levelchange);
-      // batteryRef.addEventListener('chargingtimechange', chargingtimechange);
-      // batteryRef.addEventListener(
-      //   'dischargingtimechange',
-      //   dischargingtimechange
-      // );
       isMonitoring = true;
       btnStart.classList.add('hidden');
       btnStop.classList.remove('hidden');
@@ -38,16 +30,9 @@ function stopMonitoring() {
     pauseAudio();
     batteryRef.removeEventListener('chargingchange', chargingchange);
     batteryRef.removeEventListener('levelchange', levelchange);
-    // batteryRef.removeEventListener('chargingtimechange', chargingtimechange);
-    // batteryRef.removeEventListener(
-    //   'dischargingtimechange',
-    //   dischargingtimechange
-    // );
     batteryRef = null;
     lblBatteryIsCharging.innerHTML = '-';
     lblBatteryLevel.innerHTML = '-';
-    // lblBatteryChargingTime.innerHTML = '-';
-    // lblBatteryDischargingTime.innerHTML = '-';
     isMonitoring = false;
     btnStop.classList.add('hidden');
     btnStart.classList.remove('hidden');
@@ -57,8 +42,6 @@ function stopMonitoring() {
 function updateAllBatteryInfo() {
   chargingchange();
   levelchange();
-  // chargingtimechange();
-  // dischargingtimechange();
 }
 
 function chargingchange() {
@@ -116,3 +99,7 @@ Notification.requestPermission().then((result) => {
     console.log('Notification permission granted');
   }
 });
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
