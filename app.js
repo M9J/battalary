@@ -15,16 +15,16 @@ function startMonitoring() {
 
     battery.addEventListener('chargingchange', () => {
       updateChargeInfo();
-      playAudio();
     });
-
+    
     function updateChargeInfo() {
       document.getElementById('battery-is-charging').innerHTML =
-        battery.charging ? 'Yes' : 'No';
+      battery.charging ? 'Yes' : 'No';
     }
-
+    
     battery.addEventListener('levelchange', () => {
       updateLevelInfo();
+      playAudio();
     });
 
     function updateLevelInfo() {
