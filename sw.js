@@ -1,18 +1,18 @@
 // Files to cache
 const cacheName = 'battalary-v1';
 const appShellFiles = [
-  '/index.html',
-  '/app.js',
-  '/style.css',
-  '/favicon.png',
-  '/icons/icon-32.png',
-  '/icons/icon-64.png',
-  '/icons/icon-96.png',
-  '/icons/icon-128.png',
-  '/icons/icon-168.png',
-  '/icons/icon-192.png',
-  '/icons/icon-256.png',
-  '/icons/icon-512.png',
+  '/battalary/index.html',
+  '/battalary/app.js',
+  '/battalary/style.css',
+  '/battalary/favicon.png',
+  '/battalary/icons/icon-32.png',
+  '/battalary/icons/icon-64.png',
+  '/battalary/icons/icon-96.png',
+  '/battalary/icons/icon-128.png',
+  '/battalary/icons/icon-168.png',
+  '/battalary/icons/icon-192.png',
+  '/battalary/icons/icon-256.png',
+  '/battalary/icons/icon-512.png',
 ];
 const contentToCache = appShellFiles;
 
