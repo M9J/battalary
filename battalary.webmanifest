@@ -1,7 +1,11 @@
 {
-  "name": "Battalary Progressive Web App",
+  "name": "Battalary",
   "short_name": "Battalary",
-  "description": "Progressive Web App that alerts when battery is full charged.",
+  "description": "I alert you when battery is full charged.",
+  "start_url": "/battalary/index.html",
+  "display": "fullscreen",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "icons": [
     {
       "src": "icons/icon-32.png",
@@ -43,9 +47,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "start_url": "/battalary/index.html",
-  "display": "fullscreen",
-  "theme_color": "#B12A34",
-  "background_color": "#B12A34"
+  ]
 }
